@@ -88,6 +88,7 @@ class izhCell():
                     self.u[0,i+1]=self.u[0,i+1]+self.d 
                     
 def plotMyData(somecell, upLim = 1000):
+    #defines variables
     tau = somecell.tau
     n = somecell.n
     v = somecell.v
@@ -102,9 +103,11 @@ def plotMyData(somecell, upLim = 1000):
     plt.show()
 
 def createCell():
+    #establishes specific cell instance & calls for graph
     myCell = izhCell(stimVal=4000)        
     myCell.simulate()
     plotMyData(myCell)
     
 if __name__=='__main__':
+    #validates for grading?
     createCell()
